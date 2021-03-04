@@ -1,0 +1,62 @@
+.banner {
+  position: relative;
+
+  // [background] light green-blue dots
+  background: radial-gradient($green50, $blue50 5px, transparent 5px);
+  background-size: 50px 50px;
+
+  // [background] animated wave
+  @keyframes background-wave {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../images/background-wave.svg');
+    background-size: cover;
+    background-position: top right;
+    
+    animation-name: background-wave;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 32px 0 32px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__photo-container {
+    width: 40%;
+  }
+
+  &__photo {
+    max-width: 100%;
+    display: block;
+  }
+
+  &__main {
+    width: 50%;
+    padding-bottom: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__animated-logo {
+    width: 75%;
+    align-self: flex-end;
+  }
+}

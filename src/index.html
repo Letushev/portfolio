@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oleksiy Letushev - front-end developer</title>
+  <title>Oleksiy Letushev - Front-End Developer</title>
 </head>
 <body>
-  <img src="./images/photo.png" alt="" />
+  <div class="banner">
+    <div class="banner__content">
+      <div class="banner__photo-container">
+        <img
+          class="banner__photo"
+          src="./images/photo.png"
+          srcset="./images/photo2x.png 2x"
+          alt="Oleksiy Letushev photo"
+        />
+      </div>
+      <div class="banner__main">
+        <div class="animated-logo banner__animated-logo">
+          <canvas class="animated-logo__canvas">
+            <!-- Fallback image -->
+            <img
+              class="animated-logo__static-img"
+              src="./images/static-logo.svg"
+              alt="logo"
+            />
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

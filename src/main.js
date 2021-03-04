@@ -1,19 +1,9 @@
 import './styles/main.scss';
+import Logo from './animated-logo';
 
-import anotherFile from './another.js';
-
-console.log('file from main.js');
-anotherFile();
-
-class Human {
-  age = 13;
-  say = (...args) => {
-    const [a, b] = args;
-    console.log(a, b);
-    console.log(args);
-    console.log('hello' + this.age);
-  }
-}
-
-const Any = new Human();
-Any.say(1, 2, 3);
+const photo = document.querySelector('.banner__photo');
+photo.addEventListener('load', () => {
+  const canvas = document.querySelector('.animated-logo__canvas');
+  const logo = new Logo(canvas);
+  logo.animate();
+});

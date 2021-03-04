@@ -1,17 +1,12 @@
+@import 'normalize.css';
 @import './vars';
-
-body {
-  background-color: $red;
-}
+@import './banner';
+@import './animated-logo';
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
 }
 
 html {
@@ -20,4 +15,6 @@ html {
 
 body {
   margin: 0;
+  background: #fff;
 }
+

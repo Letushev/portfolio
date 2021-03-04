@@ -1,13 +1,13 @@
 const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
   output: {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
   },
   module: {
     rules: [
@@ -59,6 +59,7 @@ module.exports = {
   plugins: [
     new HTMLPlugin({ template: './src/index.html' }),
     new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
+    new CleanWebpackPlugin(),
   ],
   devServer: { contentBase: './dist' },
 };
