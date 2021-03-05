@@ -1,5 +1,7 @@
 @import './animated-logo';
 @import './greeting';
+@import './social-links';
+@import './nav';
 
 .banner {
   position: relative;
@@ -46,7 +48,7 @@
     left: 34%;
     width: 21%;
     
-    @include smoothEntry(2s);
+    @include smoothEntry(1.5s, 1s);
   }
 
   &__main {
@@ -61,5 +63,13 @@
   &__animated-logo {
     width: 75%;
     align-self: flex-end;
+  }
+
+  &__nav {
+    margin-bottom: 64px;
+  }
+
+  &__social-links {
+    margin-bottom: 32px;
   }
 }

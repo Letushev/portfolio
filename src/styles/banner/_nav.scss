@@ -1,0 +1,33 @@
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 45%;
+  }
+  
+  &__link {
+    display: block;
+    padding: 2.4rem 1.2rem;
+
+    background-color: #fff;
+    border: 3px solid $blue500;
+    box-shadow: 4px 4px 6px rgba(#000, 0.15);
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: $blue500;
+
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 4px 4px 10px rgba(#000, 0.25);
+    }
+  }
+}
