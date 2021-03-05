@@ -5,31 +5,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oleksiy Letushev - Front-End Developer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet"
+  >
 </head>
 <body>
-  <div class="banner">
-    <div class="banner__content">
-      <div class="banner__photo-container">
-        <img
-          class="banner__photo"
-          src="./images/photo.png"
-          srcset="./images/photo2x.png 2x"
-          alt="Oleksiy Letushev photo"
-        />
-      </div>
-      <div class="banner__main">
-        <div class="animated-logo banner__animated-logo">
-          <canvas class="animated-logo__canvas">
-            <!-- Fallback image -->
-            <img
-              class="animated-logo__static-img"
-              src="./images/static-logo.svg"
-              alt="logo"
-            />
-          </canvas>
+  <div class="page-wrapper">
+    <header class="banner">
+      <div class="banner__background"></div>
+      <div class="banner__content">
+        <div class="banner__photo-container">
+          <img
+            class="banner__photo"
+            src="./images/photo.png"
+            srcset="./images/photo2x.png 2x"
+            alt="Oleksiy Letushev photo"
+          />
+        </div>
+        <div class="greeting banner__greeting">
+          <p class="greeting__text">
+            Hi! My name is <span class="greeting__name">Oleksiy Letushev</span>.
+            I love coding and painting. That is why I am a <strong>front-end developer</strong>.
+          </p>
+          <a
+            download
+            href="images/logo.svg"
+            class="greeting__button"
+          >
+            RESUME
+          </a>
+        </div>
+        <div class="banner__main">
+          <div class="animated-logo banner__animated-logo">
+            <canvas class="animated-logo__canvas">
+              <!-- Fallback image -->
+              <img
+                class="animated-logo__static-img"
+                src="./images/static-logo.svg"
+                alt="logo"
+              />
+            </canvas>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
   </div>
 </body>
 </html>

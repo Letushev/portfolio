@@ -1,0 +1,43 @@
+// animation happens only 20% of time
+// rest of the time is delay between iterations
+@keyframes shineMove {
+  0% { left: -26%; }
+  20% { left: 106%; }
+  100% { left: 106%; }
+}
+
+@mixin shine($time: 4s, $color: rgba(#fff, 0.3)) {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -26%;
+
+    width: 20%;
+    height: 100%;
+    background: $color;
+    transform: skewX(-30deg);
+
+    animation-name: shineMove;
+    animation-duration: $time;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes showOpacity {
+  from { opacity:  0; }
+  to { opacity:  1; }
+}
+
+@mixin smoothEntry($delay: 0, $time: 0.25s) {
+  opacity: 0;
+  animation-name: showOpacity;
+  animation-duration: $time;
+  animation-delay: $delay;
+  animation-fill-mode: forwards;
+}

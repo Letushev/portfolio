@@ -1,9 +1,30 @@
 import './styles/main.scss';
-import Logo from './animated-logo';
+import { enableScrolling, disableScrolling } from './js/prevent-scroll';
+import Logo from './js/animated-logo';
 
-const photo = document.querySelector('.banner__photo');
-photo.addEventListener('load', () => {
-  const canvas = document.querySelector('.animated-logo__canvas');
-  const logo = new Logo(canvas);
-  logo.animate();
+window.addEventListener('DOMContentLoaded', () => {
+  disableScrolling();
+
+  const photo = document.querySelector('.banner__photo');
+
+  // after main photo is loaded:
+  // - enable scrolling
+  // - animate background
+  // - show all content with opacity transition
+  // - start animated-logo
+  photo.addEventListener('load', () => {
+    setTimeout(() => { // imitate loading [REMOVE]
+      enableScrolling();
+      
+      const background = document.querySelector('.banner__background');
+      background.classList.add('banner__background--visible');
+
+      const wrapper = document.querySelector('.page-wrapper');
+      wrapper.classList.add('page-wrapper--visible');
+
+      const canvas = document.querySelector('.animated-logo__canvas');
+      const logo = new Logo(canvas);
+      logo.animate();
+    }, 1000);
+  });
 });

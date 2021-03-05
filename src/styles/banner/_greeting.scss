@@ -1,0 +1,42 @@
+.greeting {
+  &__text {
+    margin: 0;
+    color: #fff;
+    font-size: 2.4rem;
+  }
+
+  &__name {
+    display: inline-block;
+    background-color: $red800;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.8rem;
+  }
+
+  &__button {
+    display: block;
+    margin-top: 24px;
+    padding: 1.2rem;
+
+    border: 2px solid #fff;
+    box-shadow: 4px 4px 4px rgba(#000, 0.15);
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #fff;
+
+    @include shine;
+
+    transition: all 0.15s ease-in;
+    transition-property: background-color, box-shadow;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      background-color: rgba(#fff, 0.3);
+      box-shadow: 4px 4px 8px rgba(#000, 0.2);
+    }
+  }
+}

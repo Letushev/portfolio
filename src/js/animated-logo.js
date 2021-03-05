@@ -1,4 +1,4 @@
-import logoSVG from './images/logo.svg';
+import logoSVG from '../images/logo.svg';
 
 export default class Logo {
   constructor(canvas) {
