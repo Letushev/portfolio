@@ -1,0 +1,48 @@
+@keyframes rotateWave {
+  0% { transform: rotate(0) scale(1); }
+  50% { transform: rotate(180deg) scale(0.9); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@mixin wave {
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 20em;
+    height: 20em;
+    margin-left: -10em;
+    border-radius: 40%;
+
+    animation-name: rotateWave;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    transition: top 0.5s ease-in-out;
+  }
+
+  &::before {
+    background-color: rgba($green500, 0.1);
+  }
+
+  &::after {
+    background-color: rgba($blue500, 0.1);
+    animation-delay: 1.5s;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::before,
+    &::after {
+      top: -5em;
+    }
+  }
+}

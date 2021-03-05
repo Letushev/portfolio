@@ -24,9 +24,14 @@
 
     transition: box-shadow 0.2s ease-in-out;
 
+    @include wave;
+
     &:hover,
     &:focus,
     &:active {
+      outline: none;
+      color: $blue700;
+      border-color: $blue700;
       box-shadow: 4px 4px 10px rgba(#000, 0.25);
     }
   }

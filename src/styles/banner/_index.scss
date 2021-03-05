@@ -48,7 +48,7 @@
     left: 34%;
     width: 21%;
     
-    @include smoothEntry(1.5s, 1s);
+    @include smoothEntry(0.5s, 1s);
   }
 
   &__main {

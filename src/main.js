@@ -13,18 +13,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // - show all content with opacity transition
   // - start animated-logo
   photo.addEventListener('load', () => {
-    setTimeout(() => { // imitate loading [REMOVE]
-      enableScrolling();
-      
-      const background = document.querySelector('.banner__background');
-      background.classList.add('banner__background--visible');
+    enableScrolling();
+    
+    const background = document.querySelector('.banner__background');
+    background.classList.add('banner__background--visible');
 
-      const wrapper = document.querySelector('.page-wrapper');
-      wrapper.classList.add('page-wrapper--visible');
-
-      const canvas = document.querySelector('.animated-logo__canvas');
-      const logo = new Logo(canvas);
-      logo.animate();
-    }, 1000);
+    const wrapper = document.querySelector('.page-wrapper');
+    wrapper.classList.add('page-wrapper--visible');
+    
+    const canvas = document.querySelector('.animated-logo__canvas');
+    const logo = new Logo(canvas);
+    logo.animate();
   });
 });
