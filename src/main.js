@@ -7,7 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
     init();
   } else {
     disableScrolling();
+
     const photo = document.querySelector('.banner__photo');
+
     photo.addEventListener('load', () => {
       enableScrolling();
       init();
@@ -27,8 +29,15 @@ function init() {
     const logo = new Logo(canvas);
     logo.animate();
 
+    let width = window.innerWidth;
+    
     window.addEventListener('resize', () => {
-      logo.reconfigure();
+      const newWidth = window.innerWidth;
+
+      if (width !== newWidth) {
+        logo.reconfigure();
+        width = newWidth;
+      }
     });
   });
 }
