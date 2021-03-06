@@ -1,0 +1,15 @@
+@mixin fs($size) {
+  font-size: $size;
+
+  @media (max-width: 1264px) {
+    font-size: $size * 0.85;
+  }
+
+  @media (max-width: 1142px) {
+    font-size: $size * 0.75;
+  }
+
+  @media (max-width: 480px) {
+    font-size: $size * 0.65;
+  }
+}

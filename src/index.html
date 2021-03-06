@@ -28,20 +28,27 @@
             alt="Oleksiy Letushev photo"
           />
         </div>
-        <div class="greeting banner__greeting">
-          <p class="greeting__text">
-            Hi! My name is <span class="greeting__name">Oleksiy Letushev</span><br />
-            I love coding and painting. That is why I am a <strong>front-end developer</strong>.
-          </p>
-          <a
-            download
-            href="images/logo.svg"
-            class="greeting__button"
-          >
-            Resume
-          </a>
-        </div>
         <div class="banner__main">
+          <div class="greeting banner__greeting">
+            <img
+              src="./images/photo-small.jpeg"
+              alt="Oleksiy Letushev photo"
+              class="greeting__photo"
+            />
+            <div class="greeting__main">
+              <p class="greeting__text">
+                Hi! My name is <span class="greeting__name">Oleksiy Letushev</span><br />
+                I love coding and painting. That is why I am a <strong>front-end developer</strong>.
+              </p>
+              <a
+                download
+                href="images/logo.svg"
+                class="greeting__button"
+              >
+                Resume
+              </a>
+            </div>
+          </div>
           <div class="animated-logo banner__animated-logo">
             <canvas class="animated-logo__canvas">
               <!-- Fallback image -->
@@ -52,76 +59,74 @@
               />
             </canvas>
           </div>
-          <div class="banner__links">
-            <nav class="nav banner__nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a class="nav__link" href="#about">
-                    About me
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a class="nav__link" href="#projects">
-                    Projects
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <ul class="social-links banner__social-links">
-              <li class="social-links__item">
-                <a
-                  target="_blank"
-                  class="social-links__link" 
-                  href="https://github.com/Letushev"
-                >
-                  <img
-                    class="social-links__img"
-                    src="./images/github.svg"
-                    alt="GitHub logo" 
-                  />
+          <nav class="nav banner__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#about">
+                  About me
                 </a>
               </li>
-              <li class="social-links__item">
-                <a
-                  target="_blank"
-                  class="social-links__link"
-                  href="https://www.linkedin.com/in/olexiy-letushev"
-                >
-                  <img
-                    class="social-links__img"
-                    src="./images/linkedin.svg"
-                    alt="LinkedIn logo"
-                  />
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a
-                  target="_blank"
-                  class="social-links__link"
-                  href="https://t.me/letushev"
-                >
-                  <img
-                    class="social-links__img"
-                    src="./images/telegram.svg"
-                    alt="Telegram logo"
-                  />
-                </a>
-              </li>
-              <li class="social-links__item">
-                <a
-                  target="_blank"
-                  class="social-links__link"
-                  href="https://www.instagram.com/letushev_leta"
-                >
-                  <img
-                    class="social-links__img"
-                    src="./images/instagram.svg"
-                    alt="Instagram logo"
-                  />
+              <li class="nav__item">
+                <a class="nav__link" href="#projects">
+                  Projects
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
+          <ul class="social-links banner__social-links">
+            <li class="social-links__item">
+              <a
+                target="_blank"
+                class="social-links__link" 
+                href="https://github.com/Letushev"
+              >
+                <img
+                  class="social-links__img"
+                  src="./images/github.svg"
+                  alt="GitHub logo" 
+                />
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a
+                target="_blank"
+                class="social-links__link"
+                href="https://www.linkedin.com/in/olexiy-letushev"
+              >
+                <img
+                  class="social-links__img"
+                  src="./images/linkedin.svg"
+                  alt="LinkedIn logo"
+                />
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a
+                target="_blank"
+                class="social-links__link"
+                href="https://t.me/letushev"
+              >
+                <img
+                  class="social-links__img"
+                  src="./images/telegram.svg"
+                  alt="Telegram logo"
+                />
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a
+                target="_blank"
+                class="social-links__link"
+                href="https://www.instagram.com/letushev_leta"
+              >
+                <img
+                  class="social-links__img"
+                  src="./images/instagram.svg"
+                  alt="Instagram logo"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>

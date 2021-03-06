@@ -6,7 +6,7 @@
   100% { left: 106%; }
 }
 
-@mixin shine($time: 3s, $color: rgba(#fff, 0.3)) {
+@mixin shine($time: 3s, $color: rgba(#fff, 0.25)) {
   position: relative;
   overflow: hidden;
 

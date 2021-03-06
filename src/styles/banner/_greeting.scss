@@ -2,28 +2,29 @@
   &__text {
     margin: 0;
     color: #fff;
-    font-size: 2.4rem;
+    @include fs(2.4rem);
   }
 
   &__name {
     display: inline-block;
     background-color: $red800;
-    padding: 0.4rem 0.8rem;
+    padding: calc(1em / 6) calc(1em / 3);
     border-radius: 0.8rem;
     white-space: nowrap;
   }
 
   &__button {
     display: block;
-    margin-top: 24px;
-    padding: 1.2rem;
+    max-width: 300px;
+    margin: 24px auto 0;
+    padding: calc(1em / 2);
 
-    border: 2px solid #fff;
     box-shadow: 4px 4px 4px rgba(#000, 0.15);
+    background: linear-gradient(to bottom right, $green500, $blue500);
 
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.4rem;
+    @include fs(2.4rem);
     font-weight: 500;
     color: #fff;
 
@@ -38,6 +39,50 @@
       outline: none;
       background-color: rgba(#fff, 0.3);
       box-shadow: 4px 4px 8px rgba(#000, 0.2);
+    }
+  }
+
+  &__photo {
+    display: none;
+  }
+
+  @media (max-width: 848px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__main {
+      width: 60%;
+    }
+
+    &__photo {
+      display: block;
+      width: 35%;
+      border-radius: 50%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+
+    &__photo {
+      width: 100%;
+      max-width: 150px;
+    }
+
+    &__main {
+      margin-top: 16px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__button {
+      max-width: 225px;
     }
   }
 }
