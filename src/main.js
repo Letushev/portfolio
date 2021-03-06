@@ -26,5 +26,9 @@ function init() {
     const canvas = document.querySelector('.animated-logo__canvas');
     const logo = new Logo(canvas);
     logo.animate();
+
+    window.addEventListener('resize', () => {
+      logo.reconfigure();
+    });
   });
 }

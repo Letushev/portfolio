@@ -2,6 +2,7 @@ import logoSVG from '../images/logo.svg';
 
 export default class Logo {
   constructor(canvas) {
+    this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
 
     // from outer to inner
@@ -13,14 +14,18 @@ export default class Logo {
       { color: '#e3f2fd' },
     ];
 
-    this.width = this.setSize(canvas);
-    this.waveWidth = this.getWaveWidth();
-    this.R = this.width / 2;
-
-    this.configureWaves();
-
     this.img;
     this.setImg();
+
+    this.init();
+    this.animationId;
+  }
+
+  init() {
+    this.width = this.setSize(this.canvas);
+    this.waveWidth = this.getWaveWidth();
+    this.R = this.width / 2;
+    this.configureWaves();
   }
 
   setSize(canvas) {
@@ -150,15 +155,21 @@ export default class Logo {
     this.drawImg();
     this.drawWaves(diff);
 
-    window.requestAnimationFrame(() => {
+    this.animationId = window.requestAnimationFrame(() => {
       this.draw(nextTime);
-    })
+    });
   }
 
   animate() {
     const start = new Date().getTime();
-    window.requestAnimationFrame(() => {
+    this.animationId = window.requestAnimationFrame(() => {
       this.draw(start);
     });
+  }
+
+  reconfigure() {
+    window.cancelAnimationFrame(this.animationId);
+    this.init();
+    this.animate();
   }
 }

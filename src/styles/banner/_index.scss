@@ -112,17 +112,12 @@
     &__background {
       background-position: bottom right 25%;
     }
-
-    &__content {
-      padding-left: 16px;
-      padding-right: 16px;
-    }
   }
 
   @media (max-width: 480px) {
     &__content {
-      padding-left: 12px;
-      padding-right: 12px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 }
