@@ -42,7 +42,7 @@
   &:active {
     &::before,
     &::after {
-      top: -5em;
+      top: calc(100% + 1em);
     }
   }
 }

@@ -37,8 +37,8 @@
     &:focus,
     &:active {
       outline: none;
-      background-color: rgba(#fff, 0.3);
       box-shadow: 4px 4px 8px rgba(#000, 0.2);
+      background: linear-gradient(to bottom right, $green300, $blue300);
     }
   }
 
