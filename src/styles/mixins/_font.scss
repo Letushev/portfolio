@@ -1,15 +1,19 @@
-@mixin fs($size) {
-  font-size: $size;
+@mixin mediaChange($property, $initial) {
+  #{$property}: $initial;
 
   @media (max-width: 1264px) {
-    font-size: $size * 0.85;
+    #{$property}: $initial * 0.85;
   }
 
   @media (max-width: 1142px) {
-    font-size: $size * 0.75;
+    #{$property}: $initial * 0.75;
   }
 
   @media (max-width: 480px) {
-    font-size: $size * 0.65;
+    #{$property}: $initial * 0.65;
   }
+}
+
+@mixin fs($size) {
+  @include mediaChange(font-size, $size);
 }

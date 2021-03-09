@@ -1,0 +1,93 @@
+@import './highlight';
+
+.about {
+  background-color: #fff;
+
+  &__inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin: 72px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    @include fs(2.4rem);
+  }
+
+  &__paragraph {
+    margin: 0 0 24px;
+    @include fs(2.2rem);
+    line-height: 1.6;
+
+    &--list {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__icon {
+    @include mediaChange(height, 2.2rem);
+  }
+
+  &__block {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__text {
+    width: 70%;
+  }
+
+  &__img {
+    width: 20%;
+    min-width: 125px;
+
+    &--circle {
+      border-radius: 50%;
+    }
+
+    &--centered {
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__inner {
+      width: 90%;
+    }
+
+    &__heading {
+      margin: 48px 0;
+    }
+  }
+
+  @media (max-width: 848px) {
+    &__inner {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 648px) {
+    &__block {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__img {
+      order: -1;
+      margin-bottom: 32px;
+    }
+
+    &__text {
+      width: 90%;
+    }
+  }
+}

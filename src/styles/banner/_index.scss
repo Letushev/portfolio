@@ -5,6 +5,7 @@
 
 .banner {
   position: relative;
+  background: linear-gradient(to bottom, transparent 75%, #fff);
 
   &__background {
     position: absolute;
@@ -24,12 +25,9 @@
   }
 
   &__content {
+    @include block(transparent);
     position: relative;
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 32px 32px 0 32px;
-
+    padding-bottom: 0;
     display: flex;
     justify-content: space-between;
   }
@@ -111,13 +109,6 @@
 
     &__background {
       background-position: bottom right 25%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    &__content {
-      padding-left: 16px;
-      padding-right: 16px;
     }
   }
 }

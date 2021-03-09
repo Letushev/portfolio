@@ -1,0 +1,18 @@
+.hl {
+  padding: 0 calc(1em / 3);
+  font-weight: 400;
+
+  &--low {
+    background-color: rgba(#000, 0.1);
+  }
+
+  &--medium {
+    background-color: $yellow200;
+    font-weight: 500;
+  }
+
+  &--high {
+    background-color: $blue200;
+    font-weight: 700;
+  }
+}
