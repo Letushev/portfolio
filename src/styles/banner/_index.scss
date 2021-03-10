@@ -72,7 +72,7 @@
 
   @media (max-width: 1016px) {
     &__nav {
-      margin-bottom: 32px;
+      margin-bottom: 48px;
     }
 
     &__social-links {
@@ -80,7 +80,7 @@
     }
   }
 
-  @media (max-width: 848px) {
+  @media (max-width: $bp-middle) {
     &__photo-container {
       display: none;
     }

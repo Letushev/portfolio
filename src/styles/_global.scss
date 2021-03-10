@@ -14,7 +14,7 @@ body {
   background: radial-gradient($green50, $blue50 5px, transparent 5px);
   background-size: 50px 50px;
   font-family: 'Quicksand', sans-serif;
-  color: #282828;
+  color: $text;
 }
 
 a {

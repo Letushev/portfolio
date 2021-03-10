@@ -5,7 +5,7 @@
   margin: 0 auto;
   background-color: $background;
 
-  @media (max-width: 480px) {
+  @media (max-width: $bp-small) {
     padding-left: 16px;
     padding-right: 16px;
   }

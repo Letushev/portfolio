@@ -9,7 +9,7 @@
     #{$property}: $initial * 0.75;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: $bp-small) {
     #{$property}: $initial * 0.65;
   }
 }

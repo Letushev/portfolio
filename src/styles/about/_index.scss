@@ -9,7 +9,7 @@
   }
 
   &__heading {
-    margin: 72px 0;
+    padding: 72px 0;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -65,11 +65,11 @@
     }
 
     &__heading {
-      margin: 48px 0;
+      padding: 48px 0;
     }
   }
 
-  @media (max-width: 848px) {
+  @media (max-width: $bp-middle) {
     &__inner {
       width: 100%;
     }
@@ -87,7 +87,7 @@
     }
 
     &__text {
-      width: 90%;
+      width: 95%;
     }
   }
 }
