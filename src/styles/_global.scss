@@ -29,7 +29,7 @@ ul {
 }
 
 .page-wrapper {
-  @include smoothEntry(0.5s);
+  @include smoothEntry;
 }
 
 .block {

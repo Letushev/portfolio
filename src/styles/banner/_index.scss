@@ -18,10 +18,7 @@
     background-position: top right;
 
     transition: transform 1s ease-out;
-
-    &--visible {
-      transform: translateY(100%);
-    }
+    transform: translateY(100%);
   }
 
   &__content {
