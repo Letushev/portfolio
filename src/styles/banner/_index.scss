@@ -3,13 +3,17 @@
 @import './social-links';
 @import './nav';
 
+@keyframes background-entry {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
 .banner {
   position: relative;
   background: linear-gradient(to bottom, transparent 75%, #fff);
 
   &__background {
     position: absolute;
-    top: -100%;
     width: 100%;
     height: 100%;
 
@@ -17,8 +21,11 @@
     background-size: cover;
     background-position: top right;
 
-    transition: transform 1s ease-out;
-    transform: translateY(100%);
+    transform: translateY(-100%);
+    animation-name: background-entry;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 
   &__content {
