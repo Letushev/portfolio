@@ -1,4 +1,8 @@
 .greeting {
+  &__main {
+    @include smoothEntry(0.25s, 1s);
+  }
+
   &__text {
     margin: 0;
     color: #fff;
