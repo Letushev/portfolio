@@ -1,1 +1,0 @@
-# Oleksiy Letushev
