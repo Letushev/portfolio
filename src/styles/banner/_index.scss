@@ -26,6 +26,7 @@
 
   &__content {
     @include block(transparent);
+    max-width: 1200px;
     position: relative;
     padding-bottom: 0;
     display: flex;
@@ -44,7 +45,7 @@
   &__greeting {
     position: absolute;
     left: 34%;
-    width: 21%;
+    width: 25%;
   }
 
   &__main {
