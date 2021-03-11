@@ -1,16 +1,24 @@
+@function minCheck($size) {
+  @if ($size <= 1.4rem) {
+    @return 1.4rem;
+  }
+
+  @return $size;
+}
+
 @mixin mediaChange($property, $initial) {
   #{$property}: $initial;
 
   @media (max-width: 1264px) {
-    #{$property}: $initial * 0.85;
+    #{$property}: minCheck($initial * 0.85);
   }
 
   @media (max-width: 1142px) {
-    #{$property}: $initial * 0.75;
+    #{$property}: minCheck($initial * 0.75);
   }
 
   @media (max-width: $bp-small) {
-    #{$property}: $initial * 0.65;
+    #{$property}: minCheck($initial * 0.65);
   }
 }
 

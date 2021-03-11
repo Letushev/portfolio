@@ -46,17 +46,5 @@ function init() {
 
 function initLogo() {
   const canvas = document.querySelector('.animated-logo__canvas');
-  const logo = new Logo(canvas);
-  logo.animate();
-
-  let width = window.innerWidth;
-  
-  window.addEventListener('resize', () => {
-    const newWidth = window.innerWidth;
-
-    if (width !== newWidth) {
-      logo.reconfigure();
-      width = newWidth;
-    }
-  });
+  new Logo(canvas);
 }

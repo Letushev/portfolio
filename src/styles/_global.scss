@@ -39,4 +39,34 @@ ul {
 
 .block {
   @include block;
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &__inner {
+    width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: $bp-big) {
+      width: 90%;
+    }
+  
+    @media (max-width: $bp-middle) {
+      width: 100%;
+    }
+  }
+}
+
+.heading {
+  padding: 72px 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  @include fs(2.4rem);
+
+  @media (max-width: $bp-big) {
+    padding: 48px 0;
+  }
 }

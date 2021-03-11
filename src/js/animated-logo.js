@@ -17,8 +17,16 @@ export default class Logo {
     this.img;
     this.setImg();
 
-    this.init();
     this.animationId;
+    this.isRunning = false;
+    this.init();
+    this.animate();
+
+    window.addEventListener('blur', this.stop);
+    window.addEventListener('focus', this.animate);
+
+    this.windowWidth  = window.innerWidth;
+    window.addEventListener('resize', this.onWindowResize);
   }
 
   init() {
@@ -26,6 +34,14 @@ export default class Logo {
     this.waveWidth = this.getWaveWidth();
     this.R = this.width / 2;
     this.configureWaves();
+  }
+
+  onWindowResize = () => {
+    const newWidth = window.innerWidth;
+    if (this.windowWidth !== newWidth) {
+      this.reconfigure();
+      this.windowWidth = newWidth;
+    }
   }
 
   setSize(canvas) {
@@ -160,15 +176,24 @@ export default class Logo {
     });
   }
 
-  animate() {
+  animate = () => {
+    if (this.isRunning) return;
+
     const start = new Date().getTime();
     this.animationId = window.requestAnimationFrame(() => {
       this.draw(start);
     });
+
+    this.isRunning = true;
+  }
+
+  stop = () => {
+    this.isRunning = false;
+    window.cancelAnimationFrame(this.animationId);
   }
 
   reconfigure() {
-    window.cancelAnimationFrame(this.animationId);
+    this.stop();
     this.init();
     this.animate();
   }

@@ -132,8 +132,8 @@
     </header>
     <section class="about">
       <div class="block">
-        <div class="about__inner">
-          <h2 class="about__heading" id="about">About me</h2>
+        <div class="block__inner">
+          <h2 class="heading" id="about">About me</h2>
           <div class="about__block">
             <p class="about__paragraph about__text">
               Hi there! My name is Oleksiy Letushev and I am a 21-year-old web developer. Currently, I am residing and working in <b class="hl hl--low">Kyiv</b>, Ukraine.
@@ -168,7 +168,7 @@
           <div class="about__block">
             <div class="about__text">
               <p class="about__paragraph">
-                Then, I have been working as a front-end developer at <b class="hl hl--medium"><a class="about__link" href="https://lun.ua/" target="_blank">ЛУН</a></b> for a year. I've gained a lot of experience there due to team work on a big complex project. I have mastered plenty of new skills and tools such as: <b class="hl hl--high">React</b>, <b class="hl hl--high">Git</b>, <b class="hl hl--high">GitHub</b>, <b class="hl hl--high">Webpack</b>, <b class="hl hl--high">SCSS</b>, <b class="hl hl--high">MobX</b>, and many more.
+                Then, I have been working as a front-end developer at <b class="hl hl--medium"><a class="about__link" href="https://lun.ua/" target="_blank" lang="uk">ЛУН</a></b> for a year. I've gained a lot of experience there due to team work on a big complex project. I have mastered plenty of new skills and tools such as: <b class="hl hl--high">React</b>, <b class="hl hl--high">Git</b>, <b class="hl hl--high">GitHub</b>, <b class="hl hl--high">Webpack</b>, <b class="hl hl--high">SCSS</b>, <b class="hl hl--high">MobX</b>, and many more.
               </p>
               <p class="about__paragraph">I have learned how to:</p>
               <ul class="about__paragraph about__paragraph--list">
@@ -198,6 +198,151 @@
               src="./images/hobby.jpeg"
               alt="Oleksiy Letushev is jumping while playing the guitar"
             />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="block block--transparent">
+        <div class="block__inner">
+          <h2 class="heading projects__heading" id="projects">Projects</h2>
+          <div class="projects__list">
+            <a
+              target="_blank"
+              href="https://github.com/Letushev/portfolio"
+              class="project"
+            >
+              <img
+                src="./images/portfolio.png"
+                alt="screenshot"
+                class="project__img"
+              />
+              <div class="project__body">
+                <h3 class="project__name">Portfolio</h3>
+                <p class="project__desc">
+                  Personal portfolio landing page with responsive design and smooth animations.
+                </p>
+                <ul class="project__features">
+                  <li class="project__feature">Responsive design</li>
+                  <li class="project__feature">Canvas animation</li>
+                  <li class="project__feature">Webpack configuration</li>
+                </ul>
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/Letushev/Melody"
+              class="project"
+            >
+              <img
+                src="./images/melody.png"
+                alt="screenshot"
+                class="project__img"
+              />
+              <div class="project__body">
+                <h3 class="project__name" lang="uk">Мелоді</h3>
+                <p class="project__desc">
+                  Fullstack progressive web application built with React and GraphQL for creating, editing, and sharing guitar tabs.
+                </p>
+                <ul class="project__features">
+                  <li class="project__feature">React</li>
+                  <li class="project__feature">GraphQL server</li>
+                  <li class="project__feature">Prisma</li>
+                  <li class="project__feature">Progressive Web App</li>
+                  <li class="project__feature">Docker</li>
+                  <li class="project__feature">Search & Pagination</li>
+                  <li class="project__feature">Authorization</li>
+                  <li class="project__feature">Responsive design</li>
+                </ul>
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/Letushev/burger-builder"
+              class="project"
+            >
+              <img
+                src="./images/burger-builder.png"
+                alt="screenshot"
+                class="project__img"
+              />
+              <div class="project__body">
+                <h3 class="project__name">Burger Builder</h3>
+                <p class="project__desc">
+                  SPA for building and ordering burgers. Users can sign up, log in, build burgers by adding ingredients, place an order.
+                </p>
+                <ul class="project__features">
+                  <li class="project__feature">React</li>
+                  <li class="project__feature">Redux</li>
+                  <li class="project__feature">Firebase</li>
+                  <li class="project__feature">Authorization</li>
+                  <li class="project__feature">Routing</li>
+                </ul>
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/Letushev/weather-app"
+              class="project"
+            >
+              <img
+                src="./images/weather.png"
+                alt="screenshot"
+                class="project__img"
+              />
+              <div class="project__body">
+                <h3 class="project__name">Weather App</h3>
+                <p class="project__desc">
+                  Simple weather application built with plain JS. Users can seach weather forecast for any location, view search history, and add favorite cities.
+                </p>
+                <ul class="project__features">
+                  <li class="project__feature">Weatherbit API</li>
+                  <li class="project__feature">Vanilla JS</li>
+                  <li class="project__feature">SCSS</li>
+                </ul>
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/Letushev/Memory-Pair-Game"
+              class="project"
+            >
+              <img
+                src="./images/memory.png"
+                alt="screenshot"
+                class="project__img"
+              />
+              <div class="project__body">
+                <h3 class="project__name">Memory Pair Game</h3>
+                <p class="project__desc">
+                  Simple native JS game to improve your memory with Star Wars characters.
+                </p>
+                <ul class="project__features">
+                  <li class="project__feature">Vanilla JS</li>
+                </ul>
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/Letushev/Checkout-page"
+              class="project"
+            >
+              <img
+                src="./images/checkout.png"
+                alt="screenshot"
+                class="project__img"
+              />
+              <div class="project__body">
+                <h3 class="project__name">Checkout Page</h3>
+                <p class="project__desc">
+                  Complex HTML & CSS form with custom controls.
+                </p>
+                <ul class="project__features">
+                  <li class="project__feature">HTML</li>
+                  <li class="project__feature">CSS</li>
+                </ul>
+              </div>
+            </a>
           </div>
         </div>
       </div>

@@ -8,14 +8,6 @@
     margin: 0 auto;
   }
 
-  &__heading {
-    padding: 72px 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700;
-    @include fs(2.4rem);
-  }
-
   &__paragraph {
     margin: 0 0 24px;
     @include fs(2.2rem);
@@ -56,22 +48,6 @@
 
     &--centered {
       align-self: center;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    &__inner {
-      width: 90%;
-    }
-
-    &__heading {
-      padding: 48px 0;
-    }
-  }
-
-  @media (max-width: $bp-middle) {
-    &__inner {
-      width: 100%;
     }
   }
 
