@@ -48,10 +48,10 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpe?g|gif)$/i,
+        test: /\.(png|svg|jpe?g|gif|pdf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[hash][ext][query]'
+          filename: 'files/[hash][ext][query]'
         }
       },
     ],
