@@ -74,9 +74,15 @@ module.exports = {
     new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
-      patterns: [{ 
-        from: path.resolve(__dirname, 'src', 'sitemap.xml') 
-      }]
+      patterns: [
+        { 
+          from: path.resolve(__dirname, 'src', 'sitemap.xml') 
+        },
+        { 
+          from: path.resolve(__dirname, 'src', 'files'),
+          to: 'files/'
+        }
+      ]
     })
   ],
   devServer: { contentBase: './dist' },
