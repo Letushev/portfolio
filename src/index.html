@@ -14,10 +14,16 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet"
   >
-  <meta property="og:title" content="Oleksiy Letushev - Front-End Developer">
-  <meta property="og:description" content="Oleksiy Letushev personal portfolio website">
-  <meta property="og:image" content="./images/og-portfolio.png">
-  <meta property="og:url" content="https://letushev.github.io/portfolio/">
+  <meta name="google-site-verification" content="92vOFHogjCGsCTV6TbVj-U-HfCupc2bmjeWpDCunZrQ" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-818JQE67WX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-818JQE67WX');
+  </script>
 </head>
 <body>
   <div class="page-wrapper">
@@ -25,20 +31,32 @@
       <div class="banner__background"></div>
       <div class="banner__content">
         <div class="banner__photo-container">
-          <img
-            class="banner__photo"
-            src="./images/photo.png"
-            srcset="./images/photo2x.png 2x"
-            alt="Oleksiy Letushev photo"
-          />
+          <picture>
+            <source
+              media="(max-width: 848px)"
+              srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            />
+            <source srcset="./images/photo2x.png 2x" />
+            <img
+              class="banner__photo"
+              src="./images/photo.png"
+              alt="Oleksiy Letushev photo"
+            />
+          </picture>
         </div>
         <div class="banner__main">
           <div class="greeting banner__greeting">
-            <img
-              src="./images/photo-small.jpeg"
-              alt="Oleksiy Letushev photo"
-              class="greeting__photo"
-            />
+            <picture class="greeting__photo-container">
+              <source
+                media="(max-width: 848px)"
+                srcset="./images/photo-small.jpeg"
+              />
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                alt="Oleksiy Letushev photo"
+                class="greeting__photo"
+              />
+            </picture>
             <div class="greeting__main">
               <p class="greeting__text">
                 Hi! My name is <span class="greeting__name">Oleksiy Letushev</span><br />
@@ -148,9 +166,10 @@
               At school, I had no problems with maths, informatics, and physics, so I considered studying a technical specialization at university.<br />I graduated from the <b class="hl hl--medium">Taras Shevchenko National University of Kyiv</b> with a bachelor's degree in <b class="hl hl--medium">computer science</b> a year ago. That was an exciting and sometimes extremely challenging period of my life. I am very thankful to the university for giving me such important fundamental programming skills as <b class="hl hl--low">C++</b>, <b class="hl hl--low">C#</b>, <b class="hl hl--low">ASP.NET</b>, <b class="hl hl--low">Java</b>, <b class="hl hl--low">Python</b>, <b class="hl hl--low">OOP</b>, <b class="hl hl--low">SQL</b>. However, I had to study a lot of higher mathematics at the <b class="hl hl--medium">Faculty of Computer Science and Cybernetics</b>. That was okay with me as I love maths, but not exactly what I aimed at. I missed creating something visually attractive.
             </p>
             <img
-              class="about__img"
-              src="./images/knu.jpeg"
+              class="about__img lazy"
+              data-src="./images/knu.jpeg"
               alt="Taras Shevchenko National University of Kyiv emblem"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             />
           </div>
           <div class="about__block">
@@ -163,9 +182,10 @@
               </p>
             </div>
             <img
-              class="about__img"
-              src="./images/kottans.svg"
+              class="about__img lazy"
+              data-src="./images/kottans.svg"
               alt="Kottans"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             />
           </div>
           <div class="about__block">
@@ -187,9 +207,10 @@
               </p>
             </div>
             <img
-              class="about__img about__img--centered"
-              src="./images/lun.png"
+              class="about__img about__img--centered lazy"
+              data-src="./images/lun.png"
               alt="ЛУН"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             />
           </div>
           <div class="about__block">
@@ -197,9 +218,10 @@
               In my spare time, I love playing the guitar <img class="about__icon" src="./images/guitar.svg" alt="guitar" />, watching movies <img class="about__icon" src="./images/movie.svg" alt="clapperboard" />, listening to music <img class="about__icon" src="./images/music.svg" alt="headphones" />, or doing any kind of sport, especially running <img class="about__icon" src="./images/runner.svg" alt="runner" />. Also, I am keen on hiking <img class="about__icon" src="./images/hiking.svg" alt="hiker" />.<br />I have a great desire to become a professional web developer and teach other people how to do this kind of magic <img class="about__icon" src="./images/magic.svg" alt="stars" />!
             </p>
             <img
-              class="about__img about__img--circle"
-              src="./images/hobby.jpeg"
+              class="about__img about__img--circle lazy"
+              data-src="./images/hobby.jpeg"
               alt="Oleksiy Letushev is jumping while playing the guitar"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
             />
           </div>
         </div>
@@ -216,9 +238,10 @@
               class="project"
             >
               <img
-                src="./images/portfolio.png"
+                data-src="./images/portfolio.png"
                 alt="screenshot"
-                class="project__img"
+                class="project__img lazy"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               />
               <div class="project__body">
                 <h3 class="project__name">Portfolio</h3>
@@ -238,9 +261,10 @@
               class="project"
             >
               <img
-                src="./images/melody.png"
+                data-src="./images/melody.png"
                 alt="screenshot"
-                class="project__img"
+                class="project__img lazy"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               />
               <div class="project__body">
                 <h3 class="project__name" lang="uk">Мелоді</h3>
@@ -265,9 +289,10 @@
               class="project"
             >
               <img
-                src="./images/burger-builder.png"
+                data-src="./images/burger-builder.png"
                 alt="screenshot"
-                class="project__img"
+                class="project__img lazy"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               />
               <div class="project__body">
                 <h3 class="project__name">Burger Builder</h3>
@@ -289,9 +314,10 @@
               class="project"
             >
               <img
-                src="./images/weather.png"
+                data-src="./images/weather.png"
                 alt="screenshot"
-                class="project__img"
+                class="project__img lazy"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               />
               <div class="project__body">
                 <h3 class="project__name">Weather App</h3>
@@ -311,9 +337,10 @@
               class="project"
             >
               <img
-                src="./images/memory.png"
+                data-src="./images/memory.png"
                 alt="screenshot"
-                class="project__img"
+                class="project__img lazy"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               />
               <div class="project__body">
                 <h3 class="project__name">Memory Pair Game</h3>
@@ -331,9 +358,10 @@
               class="project"
             >
               <img
-                src="./images/checkout.png"
+                data-src="./images/checkout.png"
                 alt="screenshot"
-                class="project__img"
+                class="project__img lazy"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
               />
               <div class="project__body">
                 <h3 class="project__name">Checkout Page</h3>

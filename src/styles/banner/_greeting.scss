@@ -64,9 +64,13 @@
       width: 60%;
     }
 
+    &__photo-container {
+      width: 35%;
+    }
+
     &__photo {
       display: block;
-      width: 35%;
+      width: 100%;
       border-radius: 50%;
     }
   }
@@ -75,7 +79,7 @@
     flex-direction: column;
     align-items: center;
 
-    &__photo {
+    &__photo-container {
       width: 100%;
       max-width: 150px;
     }
