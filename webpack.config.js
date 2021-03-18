@@ -2,6 +2,7 @@ const path = require('path');
 const HTMLPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -72,6 +73,11 @@ module.exports = {
     new HTMLPlugin({ template: './src/index.html' }),
     new MiniCSSExtractPlugin({ filename: '[name].[contenthash].css' }),
     new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [{ 
+        from: path.resolve(__dirname, 'src', 'sitemap.xml') 
+      }]
+    })
   ],
   devServer: { contentBase: './dist' },
 };
