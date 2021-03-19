@@ -3,6 +3,7 @@ const HTMLPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const CSSMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -85,5 +86,12 @@ module.exports = {
       ]
     })
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      '...',
+      new CSSMinimizerPlugin()
+    ]
+  },
   devServer: { contentBase: './dist' },
 };
