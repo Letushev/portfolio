@@ -22,8 +22,13 @@ export default class Logo {
     this.init();
     this.animate();
 
-    window.addEventListener('blur', this.stop);
-    window.addEventListener('focus', this.animate);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        this.stop();
+      } else {
+        this.animate();
+      }
+    });
 
     this.windowWidth  = window.innerWidth;
     window.addEventListener('resize', this.onWindowResize);
